@@ -5,7 +5,7 @@ from unit.calc import Calc
 
 
 class TestCalc:
-    def test_step(self):
+    def setup(self):
         self.calc = Calc()
 
     # yaml参数化

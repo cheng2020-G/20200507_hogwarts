@@ -20,13 +20,15 @@ class TestCalc:
         # except:
 
     @allure.story("减法")
-    @pytest.mark.parametrize(["a", "b", "c"], yaml.safe_load(open("D:/PycharmProject/20200507_pytest_calc/data/data_sub.yaml")))
+    @pytest.mark.parametrize(["a", "b", "c"],
+                             yaml.safe_load(open("D:/PycharmProject/20200507_pytest_calc/data/data_sub.yaml")))
     def test_sub(self, a, b, c):
         result = self.calc.sub(a, b)
         assert result == c
 
     @allure.story("乘法")
-    @pytest.mark.parametrize(["a", "b", "c"], yaml.safe_load(open("D:/PycharmProject/20200507_pytest_calc/data/data_mul.yaml")))
+    @pytest.mark.parametrize(["a", "b", "c"],
+                             yaml.safe_load(open("D:/PycharmProject/20200507_pytest_calc/data/data_mul.yaml")))
     def test_mul(self, a, b, c):
         result = self.calc.mul(a, b)
         assert result == c

@@ -3,17 +3,10 @@ import selenium
 from selenium import webdriver
 from time import sleep
 
+from test_Selenium.test_Baidu.test_baidu_base import TestBaiduBase
 
-class TestElement():
 
-    def setup(self):
-        self.driver = webdriver.Chrome()
-        self.driver.get("https://www.baidu.com/")
-        self.driver.maximize_window()
-        self.driver.implicitly_wait(3)
-
-    def teardown(self):
-        self.driver.quit()
+class TestElement(TestBaiduBase):
 
     @pytest.mark.skip
     def test_element_by_id(self):

@@ -7,7 +7,6 @@ from test_Selenium.test_Action.test_action_base import TestAction
 
 
 class TestActions(TestAction):
-    # 点击、右击、双击
     @pytest.mark.skip
     def test_action_click(self):
         self.driver.get("http://sahitest.com/demo/clicks.htm")
@@ -34,8 +33,9 @@ class TestActions(TestAction):
     # actionchains用法：鼠标移动到某个元素上
     # @pytest.mark.skip
     def test_action_move(self):
+        sleep(3)
         self.driver.get("https://www.baidu.com/")
-        ele_move = self.driver.find_element_by_xpath("//*[@id='u']//a[2]")
+        ele_move = self.driver.find_element_by_xpath("//*[@id='u1']//a[2]")
         action = ActionChains(self.driver)
         action.move_to_element(ele_move)
         action.perform()

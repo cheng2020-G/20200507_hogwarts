@@ -11,7 +11,7 @@ class TestBase():
     def setup(self):
         # 定义多浏览器变量，获取虚拟环境brower传值，用于浏览器driver判断
         browser = os.getenv("browser")
-        if browser == "chrome":
+        if browser == "ie":
             self.driver = webdriver.Ie()
         elif browser == "firefox":
             self.driver = webdriver.Firefox()

@@ -7,7 +7,7 @@ from test_Selenium.test_Action.test_action_base import TestAction
 
 
 class TestActions(TestAction):
-    # actionchains用法：点击、右击、双击
+    # 点击、右击、双击
     @pytest.mark.skip
     def test_action_click(self):
         self.driver.get("http://sahitest.com/demo/clicks.htm")

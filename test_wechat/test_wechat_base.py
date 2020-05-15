@@ -5,11 +5,11 @@ from selenium.webdriver.chrome.options import Options
 class TestBase():
     def setup(self):
         # 复用浏览器
-        options = Options()
-        options.debugger_address = "127.0.0.1:9333"
-        self.driver = webdriver.Chrome(options=options)
+        chrome_options = Options()
+        chrome_options.debugger_address = "127.0.0.1:9666"
+        # self.driver = webdriver.Chrome(options=chrome_options)
         # 不复用浏览器
-        # self.driver = webdriver.Chrome()
+        self.driver = webdriver.Chrome()
         self.driver.maximize_window()
         self.driver.implicitly_wait(3)
 

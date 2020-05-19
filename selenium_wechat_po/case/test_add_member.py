@@ -8,4 +8,7 @@ class TestAddMember():
         self.main = Main()
 
     def test_addmember(self):
-        self.main.goto_add_member().add_member()
+        add_member = self.main.goto_add_member()
+        add_member.add_member()
+        # 添加断言，验证是否新增的成员成功
+        assert "hogwarts" in add_member.get_element()

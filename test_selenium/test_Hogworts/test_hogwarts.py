@@ -1,4 +1,4 @@
-from test_Selenium.test_Hogworts.test_base import TestBase
+from test_selenium.test_Hogworts.test_base import TestBase
 
 
 class TestHogwarts(TestBase):

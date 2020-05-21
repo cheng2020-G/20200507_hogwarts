@@ -3,7 +3,7 @@ import selenium
 from selenium import webdriver
 from time import sleep
 
-from test_Selenium.test_Baidu.test_baidu_base import TestBaiduBase
+from test_selenium.test_Baidu.test_baidu_base import TestBaiduBase
 
 
 class TestElement(TestBaiduBase):

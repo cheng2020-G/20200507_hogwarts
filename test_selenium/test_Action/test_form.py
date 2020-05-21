@@ -1,4 +1,4 @@
-from test_Selenium.test_Action.test_action_base import TestAction
+from test_selenium.test_Action.test_action_base import TestAction
 
 
 class TestForm(TestAction):

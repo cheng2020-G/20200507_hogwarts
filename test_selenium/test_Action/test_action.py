@@ -3,7 +3,7 @@ import pytest
 from selenium.webdriver import ActionChains
 from selenium.webdriver.common.keys import Keys
 
-from test_Selenium.test_Action.test_action_base import TestAction
+from test_selenium.test_Action.test_action_base import TestAction
 
 
 class TestActions(TestAction):

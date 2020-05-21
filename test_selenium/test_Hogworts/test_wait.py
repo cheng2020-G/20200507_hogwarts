@@ -3,7 +3,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
 
-from test_Selenium.test_Hogworts.test_base import TestBase
+from test_selenium.test_Hogworts.test_base import TestBase
 
 
 class TestWait(TestBase):

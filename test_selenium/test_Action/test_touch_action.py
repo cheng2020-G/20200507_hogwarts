@@ -2,7 +2,7 @@ from time import sleep
 
 from selenium.webdriver import TouchActions
 
-from test_Selenium.test_Action.test_action_base import TestAction
+from test_selenium.test_Action.test_action_base import TestAction
 
 
 class TestTouchAction(TestAction):

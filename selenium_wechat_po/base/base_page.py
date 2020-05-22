@@ -19,7 +19,7 @@ class BasePage():
         else:
             self.driver = driver
 
-        if self.base_url != None:
+        if self.base_url != "":
             self.driver.get(self.base_url)
 
     def find(self, by, location):

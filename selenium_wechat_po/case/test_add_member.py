@@ -19,3 +19,7 @@ class TestAddMember():
         add_member_contact = self.main.goto_contact().add_member_contacts()
         add_member_contact.add_member()
         assert "hogwarts" in add_member_contact.get_element()
+
+    # def test_del_member(self):
+    #     del_member = "hogwarts"
+    #     del_member_action = self.main.goto_contact()

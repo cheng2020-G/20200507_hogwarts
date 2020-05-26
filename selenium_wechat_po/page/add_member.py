@@ -18,9 +18,9 @@ class AddMember(BasePage):
         # 获取元素属性值到list，第一种方法
         # list = []
         # for element in elements:
-        #     # h获取所有的title值
+        #     # 获取所有的title值
         #     list.append(element.get_attribute("title"))
+        # return list
 
-        # 获取元素属性值到list，第二种方法，列表推导式
-        list = [element.get_attribute("title") for element in elements]
-        return list
+        # 获取元素属性值，第二种方法，列表推导式
+        return [element.get_attribute("title") for element in elements]

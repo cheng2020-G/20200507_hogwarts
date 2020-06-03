@@ -79,7 +79,7 @@ class TestHttp():
     def test_http_data(self):
         url = 'http://httpbin.org/get'
         payload = {'key1': 'value1', 'key2': 'value2'}
-        r = requests.post('url', data=payload)
+        r = requests.post(url, data=payload)
         print(r.text)
         print(r.status_code)
         print(r.headers)

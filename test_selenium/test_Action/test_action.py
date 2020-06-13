@@ -31,7 +31,7 @@ class TestActions(TestAction):
         action.perform()
 
     # actionchains用法：鼠标移动到某个元素上
-    # @pytest.mark.skip
+    @pytest.mark.skip
     def test_action_move(self):
         sleep(3)
         self.driver.get("https://www.baidu.com/")
@@ -45,19 +45,20 @@ class TestActions(TestAction):
     @pytest.mark.skip
     def test_action_dragdrop(self):
         self.driver.get("http://sahitest.com/demo/dragDropMooTools.htm")
-        ele_drag = self.driver.find_element_by_xpath()
-        ele_drop = self.driver.find_element_by_xpath()
+        ele_drag = self.driver.find_element_by_id("dragger")
+        ele_drop = self.driver.find_element_by_xpath("/html/body//div[2]")
         action = ActionChains(self.driver)
         action.drag_and_drop(ele_drag, ele_drop).perform()
         # 或者
-        action.click_and_hold(ele_drag).release(ele_drop).perform()
+        # action.click_and_hold(ele_drag).release(ele_drop).perform()
         # 再或者
-        action.click_and_hold(ele_drag).move_to_element(ele_drop).release().perform()
+        # action.click_and_hold(ele_drag).move_to_element(ele_drop).release().perform()
+        sleep(3)
 
-    @pytest.mark.skip
+    # @pytest.mark.skip
     def test_action_keys(self):
         self.driver.get("http://sahitest.com/demo/label.htm")
-        ele_keys = self.driver.find_element_by_xpath()
+        ele_keys = self.driver.find_element_by_xpath("/html/body/label[1]/input")
         ele_keys.click()
         action = ActionChains(self.driver)
         # pause等待
@@ -66,3 +67,4 @@ class TestActions(TestAction):
         action.send_keys("tom").pause(1)
         action.send_keys(Keys.BACK_SPACE).pause(1)
         action.perform()
+        sleep(3)

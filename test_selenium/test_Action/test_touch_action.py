@@ -12,9 +12,9 @@ class TestTouchAction(TestAction):
         ele_search = self.driver.find_element_by_xpath("//*[@id='su']")
         ele_input.send_keys("selenium")
         action = TouchActions(self.driver)
-        action.tap(ele_search)
+        action.tapaction.tap(ele_search)
         # action.scroll(10000)
-        # 滑动到页面底部，从哪个元素开始
+        # 从某个元素开始滑动到页面底部，数值越大，滑动的幅度越大
         action.scroll_from_element(ele_search, 0, 10000)
         action.perform()
         sleep(2)

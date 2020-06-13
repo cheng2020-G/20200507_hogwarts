@@ -1,9 +1,12 @@
 import json
 
+import pytest
 import requests
 
 
 class TestNetLoan():
+    # @pytest.fixture()
+    # @pytest.mark.skip
     def test_register(self):
         url = 'http://161.117.184.189:8888/user/api/register'
         # headers = {"Content-Type": "application/json", "User-Agent": "Chrome", "appversion": "1.1.6",
@@ -19,7 +22,6 @@ class TestNetLoan():
         # json关键字
         # r = requests.post(url, json=post_data)
         assert r.json()["msg"] == "手机号格式无效"
-
         print(r.url)
         print(r.text)
         print(r.status_code)

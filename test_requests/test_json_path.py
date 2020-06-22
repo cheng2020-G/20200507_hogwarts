@@ -16,3 +16,11 @@ class TestJsonpath():
         user_id = jsonpath(r.json(), '$..topics.user[?(@.user.login)]')
         print(r.text)
         print('url is:' + str(user_id))
+
+    def test_hogwarts_jsonpath(self):
+        url = "https://ceshiren.com/categories.json"
+        r = requests.get(url)
+        print(r.json())
+        assert r.json()['category_list']['categories'][0]['name'] == '霍格沃兹测试学院公众号'
+        assert jsonpath(r.json(), '$.category_list.categories[0].name') == '霍格沃兹测试学院公众号'
+        assert jsonpath(r.json(), '$..name')[0] == '霍格沃兹测试学院公众号'

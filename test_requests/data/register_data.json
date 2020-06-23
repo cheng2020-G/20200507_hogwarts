@@ -1,0 +1,19 @@
+{
+    "inviteCode": "",
+    "phone": "09956236006",
+    "verifyCode": "1111",
+    "sourceType": 1,
+    "password": "123123",
+    "appVersion": "2.0.5",
+    "token": "",
+    "baiqishiToken": "string",
+    "deviceToken": "",
+    "deviceType": 1,
+    "serialNumber": "string",
+    "idcard": "",
+    "referrer": "string",
+    "deviceModel": "OPPO R11",
+    "deviceAppVersion": "7.1.1",
+    "carrier": "string",
+    "manufacturer": "OPPO"
+}

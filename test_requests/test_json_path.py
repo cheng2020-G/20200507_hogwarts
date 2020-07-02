@@ -27,3 +27,4 @@ class TestJsonpath():
         # 使用jsonpath提取出的内容为一个列表，需要再次提取[0]
         assert jsonpath(r.json(), '$.category_list.categories[0].name')[0] == '霍格沃兹测试学院公众号'
         assert jsonpath(r.json(), '$..name')[0] == '霍格沃兹测试学院公众号'
+

@@ -20,6 +20,7 @@ def test_get_dept():
     assert r.json()['department'][0]['name'] == 'cheng'
     print(jsonpath(r.json(), '$..department'))
 
+
 def test_add_dept():
     data = {
         "name": "hogwarts测试平台",

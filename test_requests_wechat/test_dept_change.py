@@ -1,6 +1,5 @@
 import pytest
 import requests
-from jsonpath import jsonpath
 
 
 @pytest.fixture(scope="session")
@@ -51,6 +50,7 @@ def test_delete_dept(id, test_access_token):
 
 @pytest.mark.parametrize("name, id, name_new", [("tester1", "6", 'ceshi1'), ("tester2", "7", 'ceshi2')])
 def test_all(name, id, name_new, test_access_token):
+    # 异常处理：如果新增部门时，部门id已存在，则删除该部门，然后再创建部门
     try:
         assert 'created' == test_add_dept(name, id, test_access_token)['errmsg']
     except AssertionError as e:

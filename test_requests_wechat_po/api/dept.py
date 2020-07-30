@@ -22,8 +22,10 @@ class Dept(BaseApi):
             "url": "https://qyapi.weixin.qq.com/cgi-bin/department/create?",
             "params": {
                 "access_token": self.token,
-                "name": "api",
+                "name": "北京部门",
+                "name_en": "dept-bj",
                 "parentid": 1,
+                "order": 1,
                 "id": 10
             }
         }
@@ -35,8 +37,9 @@ class Dept(BaseApi):
             "url": "https://qyapi.weixin.qq.com/cgi-bin/department/update?",
             "params": {
                 "access_token": self.token,
-                "id": 10,
-                "name": "apio",
+                "id": 5,
+                "name": "爱测测试平台",
+                "name_en": "ceshier",
                 "parentid": 1,
                 "order": 1
             }
@@ -49,7 +52,7 @@ class Dept(BaseApi):
             "url": "https://qyapi.weixin.qq.com/cgi-bin/department/delete?",
             "params": {
                 "access_token": self.token,
-                "id": id
+                "id": 4
             }
         }
         return self.send(data)

@@ -1,7 +1,7 @@
 from test_requests_wechat_po.test_base.testbase import TestBase
 
 
-class TestBase(TestBase):
+class TestDept(TestBase):
 
     def test_add_dept(self):
         assert self.dept.add_dept()['errmsg'] == 'created'
